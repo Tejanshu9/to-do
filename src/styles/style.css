@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  min-height: 100vh;
+}
+
+/* ===== Topbar ===== */
+
+.topbar {
+  padding: 1.2rem 2rem;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ===== Layout ===== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+}
+
+/* ===== Sidebar ===== */
+
+#projects {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: white;
+}
+
+#projects h2 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.project-item {
+  display: flex;
+    justify-content: space-between; /* pushes items apart */
+    align-items: center;
+    padding: 8px 12px;
+}
+.delete-project-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.project-item:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.active-project {
+  background: white;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+/* ===== Main Section ===== */
+
+#todos {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== Add Button ===== */
+
+.add-btn {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  transition: transform 0.1s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Form ===== */
+
+.todo-form {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.todo-form input,
+.todo-form select,
+.todo-form textarea {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.todo-form button {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ===== Todo Cards ===== */
+
+.todo {
+  background: #f9fafb;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 14px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  border-left: 6px solid #6366f1;
+}
+
+.todo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.duedate,
+.priority {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.priority {
+  margin-bottom: 0.6rem;
+
+}
+
+/* Buttons inside card */
+
+.todo button {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.todo button:hover {
+  background: #e5e7eb;
+}
+
+/* Completed */
+
+.completed-task {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+/* Details */
+
+.details {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.hidden {
+  display: none;
+}
+/* Add Project Button */
+
+.add-project-btn {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #ffffff, #e0e7ff);
+  color: #4f46e5;
+
+  transition: all 0.2s ease;
+}
+
+.add-project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: white;
+}
+
+.add-project-btn:active {
+  transform: scale(0.98);
+}
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* Priority Colors */
+.priority-low {
+    color: green;
+    font-weight: bold;
+}
+
+.priority-medium {
+    color: orange;
+    font-weight: bold;
+}
+
+.priority-high {
+    color: red;
+    font-weight: bold;
+}
+
+/* Checklist */
+.checklist-container {
+    margin-top: 10px;
+}
+
+.checklist-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.checklist-done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
