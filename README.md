@@ -192,19 +192,20 @@ State is treated as the **single source of truth**.
 
 ---
 
-# 🛠 How To Run
+## 🛠 How To Run
 
-1. Clone the repository
+1. Clone the repository:
+```bash
+git clone https://github.com/Tejanshu9/to-do.git
+cd to-do
+```
+
 2. Install dependencies:
 ```bash
 npm install
 ```
-3. Bundle with Webpack:
-```bash
-npx webpack
-```
-4. Start the development server:
+
+3. Start the development server:
 ```bash
 npm start
 ```
-5. Open your browser and view the app.
